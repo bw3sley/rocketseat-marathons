@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./global.css">
+
+    <title>Maratona Explorer</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="https://gist.githubusercontent.com/maykbrito/0acdf4ce919838ffed50915a31fc5b23/raw/6f4dd01ec3116428ec4c99255944cb9ac7927590/cristal-ball.svg" alt="Imagem ilustrativa de uma bola de cristal">
+        
+            <h1>Vou revelar seu destino!</h1>
+            <p>Clique em fazer pergunta para que seu destino seja revelado.</p>
+        
+            <label for="question" class="sr-only">Digite sua pergunta:</label>
+            <input type="text" name="question" id="question" placeholder="Digite sua pergunta" aria-labelledby="Campo de texto: digite sua pergunta" />
+            
+            <button type="button" title="Fazer pergunta" aria-label="Fazer pergunta" onclick="DoQuestion()" id="ask">Fazer pergunta</button>
+        
+            <h3 id="answer"></h3>
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
