@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/global.css">
+
+    <title>Início - Casa Criativa</title>
+</head>
+<body>
+    <main id="container">
+        <section id="intro">
+            <header>
+                <a href="/">
+                    <img src="/assets/casaCriativa-logo.png" alt="Imagem da logo da Casa Criativa" title="Imagem da logo da Casa Criativa">
+                </a>
+            </header>
+
+            <main>
+                <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+                <p>Iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.</p>
+                <p>Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia.</p>
+                
+                <section id="buttons">
+                    <button type="button" onclick="toggleModalClass()" title="Adicionar ideia">+ Adicionar Ideia</button>
+                    <a href="/ideas" class="button" title="Ver ideias">Ver ideias</a>
+                </section>
+            </main>
+            
+            <footer>
+                Com ❤️ <a href="https://rocketseat.com.br" target="_blank" title="Acessar o site da Rocketseat">Rocketseat</a>
+            </footer>
+        </section>
+
+        <section id="last-ideas">
+            <% for (idea of ideas) { %>
+                <div class="idea">
+                    <img src="<%= idea.Image %>" alt="Imagem ilustrativa de <%= idea.Title %>" title="Imagem ilustrativa de <%= idea.Title %>">
+    
+                    <div class="content">
+                        <h3><%= idea.Title %></h3>
+                        <p><%= idea.Category %></p>
+    
+                        <div class="description">
+                            <%= idea.Description %>
+                        </div>
+    
+                        <a href="<%= idea.Link %>" target="_blank" title="Ir para a ideia">Ir para a ideia</a>
+                    </div>
+                </div>
+            <% } %>
+
+        </section>
+    </main>
+
+    <%- include("../components/modal") %> 
+
+    <script src="/main.js"></script>
+</body>
+</html>

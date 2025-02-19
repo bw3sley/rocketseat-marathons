@@ -1,0 +1,21 @@
+{
+  "name": "casacriativa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "database": "node ./database/config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

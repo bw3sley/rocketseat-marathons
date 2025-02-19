@@ -1,0 +1,373 @@
+:root {
+    --primary-color: hsl(343, 100%, 66%);
+    --secondary-color: hsl(206, 92%, 46%);
+    --outline-color: hsla(0, 0%, 100%, 0.133);
+
+    --brand-light-gray: hsl(0, 0%, 90%);
+    --brand-dark-gray: hsl(210, 8%, 16%);
+
+    --primary-color-shadow: hsla(343, 100%, 66%, .32);
+
+    --white: hsl(0, 0%, 100%);
+
+    --subtitle: hsl(0, 0%, 47%);
+
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-color: var(--brand-light-gray);
+    color: var(--brand-dark-gray);
+}
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+.button {
+    color: var(--white);
+    background-color: var(--primary-color);
+
+    width: 15rem;
+    height: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .8rem;
+
+    box-shadow: 0 .8rem 1.6rem var(--primary-color-shadow);
+
+    transition: background 400ms;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+
+    text-decoration: none;
+}
+
+p, .description {
+    line-height: 2.4rem;
+    letter-spacing: 0.01rem;
+}
+
+a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#container {
+    max-width: 98rem;
+    width: 90%;
+
+    margin-inline: auto;
+    margin-block: 4rem;
+
+    display: flex;
+    gap: 4.8rem;
+}
+
+#intro {
+    width: 30rem;
+
+    margin-right: 2.4rem;
+}
+
+#intro header {
+    margin-bottom: 4rem;
+}
+
+#intro main {
+    margin-block: 3.2rem;
+}
+
+#intro main p {
+    margin-block: 1.6rem;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-bottom: 3.2rem;
+}
+
+button {
+    color: var(--primary-color);
+    background-color: transparent;
+
+    border: none;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: .02rem;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: .02rem;
+
+    color: var(--subtitle);
+}
+
+footer a {
+    opacity: .8;
+
+    font-size: 1.4rem;
+}
+
+.idea {
+    display: flex;
+
+    background-color: var(--white);
+
+    border-radius: .8rem;
+
+    box-shadow: 0 .4rem 1.6rem -.8rem rgba(1, 1, 1, .1);
+
+    padding: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.idea img {
+    width: 6rem;
+    height: 6rem;
+
+    margin-right: 3.2rem;
+}
+
+.idea p {
+    margin: 0.8rem 0;
+
+    color: var(--subtitle);
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.idea .description {
+    margin: 1.6rem 0;
+}
+
+#modal {
+    background-color: var(--primary-color);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 400ms;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    margin-top: 5%;
+
+    color: var(--white);
+}
+
+#modal .content h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 4rem;
+}
+
+#modal .content form div:nth-child(3),
+#modal .content form div:nth-child(4),
+#modal .content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+#modal form {
+    max-width: 80rem;
+    width: 80%;
+
+    margin-inline: auto;
+    margin-bottom: 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+form input, form textarea {
+    width: 100%;
+
+    padding: 1.2rem;
+
+    border: 1px solid var(--primary-color-shadow);
+    border-radius: .6rem;
+
+    outline: none;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 3.2rem;
+    letter-spacing: .08rem;
+}
+
+form button {
+    background-color: var(--white);
+
+    width: 15rem;
+    height: 4rem;
+
+    border-radius: .6rem;
+
+    cursor: pointer;
+
+    margin-top: 3.2rem;
+
+    grid-column: 2;
+    justify-self: end;
+
+    transition: background 300ms;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+
+    text-decoration: none;
+}
+
+form a {
+    background-color: var(--outline-color);
+    color: var(--white);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+
+    border-radius: .6rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    width: 15rem;
+    height: 4rem;
+
+    transition: background 300ms;
+}
+
+form a:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-ideas nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style: none;
+
+    margin-right: 1.6rem;
+}
+
+#page-ideas nav li a {
+    color: var(--brand-dark-gray);
+}
+
+#page-ideas nav li a.button {
+    color: var(--white);
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: .7;
+}
+
+section#title h1 {
+    font-size: 2.8rem;
+}
+
+#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+#ideas .idea {
+    margin: 0;
+}
+
+section#title, #ideas, #page-ideas footer {
+    margin-top: 6.4rem;
+}
